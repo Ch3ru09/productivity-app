@@ -8,4 +8,4 @@ export default function Home() {
   )
 }
 
-const styles = StyleSheet.create({})
+// const styles = StyleSheet.create({})

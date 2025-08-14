@@ -39,6 +39,12 @@ importers:
       '@babel/core':
         specifier: ^7.20.0
         version: 7.28.0
+      '@types/react':
+        specifier: ~19.0.14
+        version: 19.0.14
+      typescript:
+        specifier: ~5.8.3
+        version: 5.8.3
 
 packages:
 
@@ -2528,6 +2534,11 @@ packages:
     resolution: {integrity: sha512-Ne2YiiGN8bmrmJJEuTWTLJR32nh/JdL1+PSicowtNb0WFpn59GK8/lfD61bVtzguz7b3PBt74nxpv/Pw5po5Rg==}
     engines: {node: '>=8'}
 
+  typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   undici-types@7.10.0:
     resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
 
@@ -3922,7 +3933,6 @@ snapshots:
   '@types/react@19.0.14':
     dependencies:
       csstype: 3.1.3
-    optional: true
 
   '@types/stack-utils@2.0.3': {}
 
@@ -4338,8 +4348,7 @@ snapshots:
 
   crypto-random-string@2.0.0: {}
 
-  csstype@3.1.3:
-    optional: true
+  csstype@3.1.3: {}
 
   debug@2.6.9:
     dependencies:
@@ -5731,6 +5740,8 @@ snapshots:
   type-fest@0.21.3: {}
 
   type-fest@0.7.1: {}
+
+  typescript@5.8.3: {}
 
   undici-types@7.10.0: {}
 
