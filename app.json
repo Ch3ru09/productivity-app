@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "productivityapp",
     "name": "productivity-app",
     "slug": "productivity-app",
     "version": "1.0.0",
