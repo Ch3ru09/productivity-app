@@ -16,7 +16,14 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
-    const res = await loginWithEmail(email, password);
+    loginWithEmail(email, password)
+      .then((res) => {
+        console.log(res);
+        router.navigate("/home");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
 
   return (

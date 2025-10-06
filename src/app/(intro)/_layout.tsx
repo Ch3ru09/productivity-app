@@ -18,10 +18,15 @@ export default function RootLayout() {
       screenOptions={{
         headerTitleAlign: "center",
         headerShadowVisible: false,
-        headerStyle: { backgroundColor: "#efefef" },
+        contentStyle: {
+          backgroundColor: "#0000",
+        },
       }}
     >
-      <Stack.Screen name="index" />
+      {/* <Stack.Screen
+        name="index"
+        options={{ title: "", headerStyle: { backgroundColor: "#0000" } }}
+      /> */}
       <Stack.Screen name="login" />
       <Stack.Screen name="signup" />
     </Stack>

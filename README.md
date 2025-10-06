@@ -5,16 +5,23 @@ the the productivity of the user.
 
 ## How it's made
 
-**Frontend:** expo, react native, typescript, nativewind
+**Frontend:** expo, react native, typescript
 
-**Backend:** deno, typescript, pocketbase
+**Backend:** supabase
 
 ## Features to Implement
 
-- [ ] Login
+- [ ] Sign up
+
+  - [x] Form
+
+  - [ ] Onboarding
+
+- [x] Login
 
 - [ ] Task tracker
 
 - [ ] Exp system
 
 - [ ] Streak system
+

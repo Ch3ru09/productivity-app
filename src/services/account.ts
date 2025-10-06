@@ -6,7 +6,11 @@ export async function signup(email: string, password: string) {
     password,
   });
 
-  console.log(data);
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return JSON.stringify(data);
 }
 
 export async function loginWithEmail(email: string, password: string) {
@@ -15,7 +19,11 @@ export async function loginWithEmail(email: string, password: string) {
     password,
   });
 
-  console.log("data: ", data, "error: ", error);
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return JSON.stringify(data);
 }
 
 export async function signout() {

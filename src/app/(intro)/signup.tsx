@@ -25,7 +25,14 @@ export default function SignupPage() {
     if (password.trim() !== confirmPassword.trim()) {
       return setError("passwords do not match");
     }
-    const res = await signup(email, password);
+    signup(email, password)
+      .then((res) => {
+        console.log(res);
+        router.navigate("/home");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
 
   return (
@@ -56,7 +63,7 @@ export default function SignupPage() {
       {error ? <Text style={styles.errorText}>{error}</Text> : null}
       <Button title="Sign Up" onPress={handleSignup} />
       <TouchableOpacity onPress={() => router.navigate("/login")}>
-        <Text style={styles.linkText}>Already have an account? Sign Up</Text>
+        <Text style={styles.linkText}>Already have an account? Login</Text>
       </TouchableOpacity>
     </View>
   );
