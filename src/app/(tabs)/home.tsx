@@ -1,27 +1,38 @@
+import CategoriesModal from "@/components/CategoriesModal";
 import { signout } from "@/services/account";
-import { calculateExperience } from "@/services/tasks";
+import { getCategories } from "@/services/categories";
 import { useRouter } from "expo-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button, Text, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomePage() {
   const router = useRouter();
 
+  const [categories, setCategories] = useState();
+
   useEffect(() => {
-    calculateExperience(new Date("2025-10-10T12:30:00"));
+    getCategories().then((res) => {
+      console.log(res);
+    });
   });
 
   return (
-    <View>
-      <Text>Welcome home</Text>
-      <Button
-        title="signout"
-        onPress={() => {
-          signout();
-          router.navigate("/");
-        }}
-      />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView>
+        <View>
+          <Text>Welcome home</Text>
+          <Button
+            title="signout"
+            onPress={() => {
+              signout();
+              router.navigate("/");
+            }}
+          />
+        </View>
+        <CategoriesModal />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 

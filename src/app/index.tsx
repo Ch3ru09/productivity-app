@@ -1,9 +1,19 @@
+import { getUser } from "@/services/account";
 import { useRouter } from "expo-router";
+import { useEffect } from "react";
 import { Button, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function LandingPage() {
   const router = useRouter();
+
+  useEffect(() => {
+    getUser().then((user) => {
+      if (user) {
+        router.navigate("/home");
+      }
+    });
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>

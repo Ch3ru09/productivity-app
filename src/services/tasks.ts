@@ -8,7 +8,8 @@ export async function fetchTasks() {
   const { data: tasks, error } = await supabase
     .from("tasks")
     .select("*")
-    .eq("author", user?.id);
+    .eq("author", user?.id)
+    .order("category", { ascending: true });
 
   if (error) {
     throw new Error("Error from supabase");
