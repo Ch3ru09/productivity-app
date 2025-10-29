@@ -1,6 +1,6 @@
 import { supabase } from "@/lib/supabase";
 
-export async function fetchTasks() {
+export async function getTasks() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
