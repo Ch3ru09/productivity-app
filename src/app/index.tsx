@@ -7,12 +7,15 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function LandingPage() {
   const router = useRouter();
 
+  // useEffect(() => {
+  //   getUser().then((user) => {
+  //     if (user) {
+  //       router.navigate("/home");
+  //     }
+  //   });
+  // }, []);
   useEffect(() => {
-    getUser().then((user) => {
-      if (user) {
-        router.navigate("/home");
-      }
-    });
+    router.navigate("/home");
   }, []);
 
   return (

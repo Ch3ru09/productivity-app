@@ -5,13 +5,13 @@ import { useEffect } from "react";
 export default function TabsLayout() {
   const router = useRouter();
 
-  useEffect(() => {
-    getUser().then((user) => {
-      if (user == null) {
-        router.navigate("/");
-      }
-    });
-  });
+  // useEffect(() => {
+  //   getUser().then((user) => {
+  //     if (user == null) {
+  //       router.navigate("/");
+  //     }
+  //   });
+  // });
 
   return (
     <Stack>

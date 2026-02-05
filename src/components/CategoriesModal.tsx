@@ -29,7 +29,10 @@ export default function CategoriesModal() {
         <View style={styles.modalContainer}>
           <View style={styles.modal}>
             <View style={styles.modalHeader}>
-              <TouchableOpacity onPress={() => setModalVisible(false)}>
+              <TouchableOpacity
+                onPress={() => setModalVisible(false)}
+                style={styles.quit}
+              >
                 <Text>x</Text>
               </TouchableOpacity>
               <TouchableOpacity onPress={handleAddCategory}>
@@ -85,6 +88,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
+  },
+  quit: {
+    backgroundColor: "red",
   },
 });
 

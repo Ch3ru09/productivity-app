@@ -26,13 +26,13 @@ export default function HomePage() {
       <SafeAreaView>
         <View>
           <Text>Welcome home</Text>
-          <Button
+          {/* <Button
             title="signout"
             onPress={() => {
               signout();
               router.navigate("/");
             }}
-          />
+          /> */}
         </View>
         <CategoriesModal />
         <FlatList
