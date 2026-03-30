@@ -1,5 +1,5 @@
-import { getUser } from "@/services/account";
-import { Stack, useRouter } from "expo-router";
+// import { getUser } from "@/services/account";
+import { Tabs, useRouter } from "expo-router";
 import { useEffect } from "react";
 
 export default function TabsLayout() {
@@ -14,9 +14,9 @@ export default function TabsLayout() {
   // });
 
   return (
-    <Stack>
-      <Stack.Screen name="home" options={{ title: "Home" }} />
-      <Stack.Screen name="calendar" options={{ title: "calendar" }} />
-    </Stack>
+    <Tabs>
+      <Tabs.Screen name="index" options={{ title: "Home" }} />
+      <Tabs.Screen name="calendar" options={{ title: "calendar" }} />
+    </Tabs>
   );
 }

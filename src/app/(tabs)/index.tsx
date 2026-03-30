@@ -1,8 +1,5 @@
 import CategoriesModal from "@/components/CategoriesModal";
 import { Category, Task } from "@/lib/schema";
-import { signout } from "@/services/account";
-import { getCategories } from "@/services/categories";
-import { getTasks } from "@/services/tasks";
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { Button, FlatList, Text, View } from "react-native";
@@ -14,25 +11,20 @@ export default function HomePage() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [tasks, setTasks] = useState<Task[]>([]);
 
-  useEffect(() => {
-    getCategories().then((res) => {
-      setCategories(res);
-    });
-    getTasks();
-  }, [categories]);
-
   return (
     <SafeAreaProvider>
       <SafeAreaView>
         <View>
           <Text>Welcome home</Text>
-          {/* <Button
+          {
+            /* <Button
             title="signout"
             onPress={() => {
               signout();
               router.navigate("/");
             }}
-          /> */}
+          /> */
+          }
         </View>
         <CategoriesModal />
         <FlatList
@@ -84,4 +76,3 @@ type CategoryContainerProps = {
   level: number;
   tasks: Task[];
 };
-

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { Calendar } from "react-native-calendars";
 
 export default function CalendarPage() {
   const [markedDates, setMarkedDates] = useState<
@@ -16,6 +17,7 @@ export default function CalendarPage() {
         setMarkedDates(JSON.parse(savedDates));
       }
     };
+    loadData();
   });
 
   const toggleDay = async (date: string) => {
@@ -24,7 +26,7 @@ export default function CalendarPage() {
     if (updatedDates[date]) {
       delete updatedDates[date];
     } else {
-      updatedDates[date] = { activityTrackedId: currentActivity };
+      updatedDates[date] = { selected: true, selectedColor: "#2ecc71" };
     }
 
     setMarkedDates(updatedDates);
@@ -33,6 +35,15 @@ export default function CalendarPage() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Swimming Tracker</Text>
+      <Calendar
+        onDayPress={(day) => toggleDay(day.dateString)}
+        markedDates={markedDates}
+        theme={{
+          todayTextColor: "#e74c3c",
+          arrowColor: "#3498db",
+        }}
+      />
     </View>
   );
 }
@@ -48,5 +59,6 @@ const styles = StyleSheet.create({
 });
 
 type CalendarSelection = {
-  activityTrackedId: number;
+  selected: boolean;
+  selectedColor: string;
 };
