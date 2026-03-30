@@ -16,7 +16,7 @@ export default function TabsLayout() {
   return (
     <Stack>
       <Stack.Screen name="home" options={{ title: "Home" }} />
+      <Stack.Screen name="calendar" options={{ title: "calendar" }} />
     </Stack>
   );
 }
-
