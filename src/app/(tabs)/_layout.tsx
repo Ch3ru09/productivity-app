@@ -8,14 +8,6 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 export default function TabsLayout() {
   const router = useRouter();
 
-  // useEffect(() => {
-  //   getUser().then((user) => {
-  //     if (user == null) {
-  //       router.navigate("/");
-  //     }
-  //   });
-  // });
-
   return (
     <Tabs>
       <Tabs.Screen
