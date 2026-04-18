@@ -1,7 +1,6 @@
-# Productivity App
+# Sports Tracker
 
-This is an application that sought to gamify tasks in the hopes of increasing
-the the productivity of the user.
+I want to be able to track when I did sports and when I didn't + some stats on them
 
 ## How it's made
 
