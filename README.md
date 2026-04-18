@@ -10,17 +10,4 @@ I want to be able to track when I did sports and when I didn't + some stats on t
 
 ## Features to Implement
 
-- [ ] Sign up
-
-  - [x] Form
-
-  - [ ] Onboarding
-
-- [x] Login
-
-- [ ] Task tracker
-
-- [ ] Exp system
-
-- [ ] Streak system
 
