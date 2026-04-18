@@ -6,7 +6,7 @@ I want to be able to track when I did sports and when I didn't + some stats on t
 
 **Frontend:** expo, react native, typescript
 
-**Backend:** supabase
+**Backend:** phone async storage
 
 ## Features to Implement
 
